@@ -1,0 +1,65 @@
+---
+title: "Plotting the Solar System"
+author: "Arthur Luna - arthurluna@outlook.com"
+date: "18/06/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, cache = T, warning = F)
+```
+
+## What is this app?
+
+This app was done to explore the idea of different year-cycles of the planets in our Solar System. I have created this having in mind:
+
+- A fun way to create graphs that can have design use
+- An intuitive way to understand the different dimensions of planet's orbits
+- A playful tool to see the impact of logs and exponentials on a number sequence
+
+You can check it [here!](https://github.com/arthurlunabcf/SolarSysPlot)
+
+
+## How was this done?
+
+Each planet is a vector of the length of an even number close to its year duration measured in Earth Days. So, Earth is a vector of 364 numbers, going from 0 to 1 and back to 0 again. When you plot lenghts of time larger than the planet's cycle, this sequence is repeated as necessary. You can see the sequence creation here.
+
+```{r echo=TRUE}
+    Mercury <- c(0 + (1:44)/44, 1 - (1:44)/44)
+    Venus <- c(0 + (1:112)/112, 1 - (1:112)/112)
+    Earth <- c(0 + (1:182)/182, 1 - (1:182)/182)
+    Mars <- c(0 + (1:343)/343, 1 - (1:343)/343)
+    Jupiter <- c(0 + (1:2165)/2165, 1 - (1:2165)/2165)
+    Saturn <- c(0 + (1:5376)/5376, 1 - (1:5376)/5376)
+    Uranus <- c(0 + (1:15317)/15317, 1 - (1:15317)/15317)
+    Neptune <- c(0 + (1:30074)/30074, 1 - (1:30074)/30074)
+    Pluto <- c(0 + (1:45368)/45368, 1 - (1:45368)/45368)
+```
+
+## 
+You can log it, exponentient it or do a crazy transformation to it.
+
+```{r echo = TRUE}
+Reg <- Mercury; Reg[1:5]
+Log <- log(Mercury); Log[1:5]
+Exp <- exp(Mercury); Exp[1:5]
+Crazy <- (log(Mercury))*(Mercury)^2; Crazy[1:5]
+```
+
+## Plot it!
+Here I show 88 Earth Days, or 1 year on Mercury, with the Mercury Data
+
+```{r echo = F}
+library(ggplot2); 
+ggplot(mapping = aes(x = 1:88)) + 
+  geom_line(mapping = aes(y = Reg, color = "Regular")) + 
+  geom_line(mapping = aes(y = Log, color = "Log")) + 
+  geom_line(mapping = aes(y = Exp, color = "Exp")) + 
+  geom_line(mapping = aes(y = Crazy, color = "Crazy")) +
+  labs(x = "Earth Days", y = "values", title = "88 days on Mercury, different possibilities") +
+  theme(legend.title = element_blank())
+
+
+
+```
+

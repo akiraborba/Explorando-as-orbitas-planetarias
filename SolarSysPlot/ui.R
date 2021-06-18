@@ -33,7 +33,8 @@ shinyUI(fluidPage(
                          h4("How to use this?"),
                          h5("I tried to keep this very user-friendly. All you have to do is select the planets you whish to plot, how many earth-days units of time you whish to plot and, finally, what transformation you whish to perform on the data. All changes will take effect once you press the 'Submit' button. If you select lots of planets or a long length of time, it may take a few seconds."),
                          h4("How did you do this?"),
-                         h5("This was done using R language, particularly using the Shiny and GGplot2 packages for RStudio."),
+                         h5("This was done using R language, particularly using the Shiny and GGplot2 packages for RStudio. If you whish to dig deeper, the code for this can be seen at"), 
+                         tags$a(href = "https://github.com/arthurlunabcf/SolarSysPlot", "this GitHub repository"),
                          h4("How can I talk to you?"),
                          h5("Just send me an e-mail! You can find me at arthurlunabcf@outlook.com"))
                 

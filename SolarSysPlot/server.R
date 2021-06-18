@@ -171,7 +171,7 @@ shinyServer(function(input, output) {
                                      saturn.y(),
                                      "years on Saturn, ",
                                      uranus.y(),
-                                     "years on Uranus and, least but not last, ",
+                                     "years on Uranus and, last but not least, ",
                                      pluto.y(),
                                      "year on Pluto!"
                                      
