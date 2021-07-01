@@ -140,5 +140,5 @@ Finalmente, com os dados selecionados e transformados de acordo com o desejo do 
         planet.plot})
 ```
 #### Divirta-se!
-Pronto, tudo está nos eixos. Agora é só disponibilizar aos usuários. Você pode usar e se divertir com ela [aqui]("https://arthurluna.shinyapps.io/SolarSysPlot/")! Observe que ela foi feita em inglês. Se você deseja usar essa ferramenta e precisa dela em português, entra em contato comigo!
+Pronto, tudo está nos eixos. Agora é só disponibilizar aos usuários. Você pode usar e se divertir com ela  no https://arthurluna.shinyapps.io/SolarSysPlot/ ! Observe que ela foi feita em inglês. Se você deseja usar essa ferramenta e precisa dela em português, entra em contato comigo!
 
